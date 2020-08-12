@@ -15,15 +15,23 @@
  * Author: bbibm
  */
 
-package com.hj.approvalprocess.service;
-import com.hj.approvalprocess.entity.Page;
+package swagger.annotation;
+
+
+import org.springframework.context.annotation.Import;
+import swagger.config.SwaggerAutoConfiguration;
+
+import java.lang.annotation.*;
 
 /**
- * 申请表
- *
- * @author 胡剑
- * @date 2020-08-11 17:40:44
+ * @author bbibm
+ * @date 2018/7/21
+ * 开启bbibm swagger
  */
-public interface PageService extends IService<Page> {
-
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Inherited
+@Import({SwaggerAutoConfiguration.class})
+public @interface EnableBbibmSwagger2 {
 }
