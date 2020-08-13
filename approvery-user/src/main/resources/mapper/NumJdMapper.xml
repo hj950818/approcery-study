@@ -21,9 +21,9 @@
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.hj.approvalprocess.generator.mapper.NumJdMapper">
+<mapper namespace="com.hj.approvalprocess.mapper.NumJdMapper">
 
-  <resultMap id="numJdMap" type="com.hj.approvalprocess.generator.entity.NumJd">
+  <resultMap id="numJdMap" type="com.hj.approvalprocess.entity.NumJd">
                   <id property="id" column="id"/>
                         <result property="numT" column="num_t"/>
                         <result property="pid" column="pid"/>

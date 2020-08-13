@@ -19,11 +19,10 @@ package com.hj.approvalprocess.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.bbibm.common.core.util.R;
-import com.bbibm.common.log.annotation.SysLog;
-import com.hj.approvalprocess.generator.entity.ApprovalProcessSheetMysys;
-import com.hj.approvalprocess.generator.service.ApprovalProcessSheetMysysService;
-import org.springframework.security.access.prepost.PreAuthorize;
+import com.hj.approvalprocess.entity.ApprovalProcessSheetMysys;
+import com.hj.approvalprocess.service.ApprovalProcessSheetMysysService;
+import com.hj.approvalprocess.service.ApprovalProcessSheetMysysService;
+import com.hj.approvalprocess.utils.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
@@ -42,7 +41,7 @@ import org.springframework.web.bind.annotation.*;
 @Api(value = "approvalprocesssheetmysys", tags = "流程表管理")
 public class ApprovalProcessSheetMysysController {
 
-    private final  ApprovalProcessSheetMysysService approvalProcessSheetMysysService;
+    private final ApprovalProcessSheetMysysService approvalProcessSheetMysysService;
 
     /**
      * 分页查询
@@ -76,7 +75,7 @@ public class ApprovalProcessSheetMysysController {
     @ApiOperation(value = "新增流程表", notes = "新增流程表")
     @SysLog("新增流程表" )
     @PostMapping
-    @PreAuthorize("@pms.hasPermission('generator_approvalprocesssheetmysys_add')" )
+//    @PreAuthorize("@pms.hasPermission('generator_approvalprocesssheetmysys_add')" )
     public R save(@RequestBody ApprovalProcessSheetMysys approvalProcessSheetMysys) {
         return R.ok(approvalProcessSheetMysysService.save(approvalProcessSheetMysys));
     }
@@ -89,7 +88,7 @@ public class ApprovalProcessSheetMysysController {
     @ApiOperation(value = "修改流程表", notes = "修改流程表")
     @SysLog("修改流程表" )
     @PutMapping
-    @PreAuthorize("@pms.hasPermission('generator_approvalprocesssheetmysys_edit')" )
+//    @PreAuthorize("@pms.hasPermission('generator_approvalprocesssheetmysys_edit')" )
     public R updateById(@RequestBody ApprovalProcessSheetMysys approvalProcessSheetMysys) {
         return R.ok(approvalProcessSheetMysysService.updateById(approvalProcessSheetMysys));
     }
@@ -102,7 +101,7 @@ public class ApprovalProcessSheetMysysController {
     @ApiOperation(value = "通过id删除流程表", notes = "通过id删除流程表")
     @SysLog("通过id删除流程表" )
     @DeleteMapping("/{id}" )
-    @PreAuthorize("@pms.hasPermission('generator_approvalprocesssheetmysys_del')" )
+//    @PreAuthorize("@pms.hasPermission('generator_approvalprocesssheetmysys_del')" )
     public R removeById(@PathVariable Integer id) {
         return R.ok(approvalProcessSheetMysysService.removeById(id));
     }

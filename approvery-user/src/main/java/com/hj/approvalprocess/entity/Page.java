@@ -17,7 +17,6 @@
 
 package com.hj.approvalprocess.entity;
 
-import com.bbibm.common.security.entiy.DataEntity;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
@@ -33,9 +32,9 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @TableName("page")
-@EqualsAndHashCode(callSuper = true)
+//@EqualsAndHashCode(callSuper = true)
 @ApiModel(value = "申请表")
-public class Page extends DataEntity<Page> {
+public class Page {
 private static final long serialVersionUID = 1L;
 
     /**

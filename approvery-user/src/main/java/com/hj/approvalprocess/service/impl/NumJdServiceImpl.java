@@ -17,9 +17,9 @@
 package com.hj.approvalprocess.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.hj.approvalprocess.generator.entity.NumJd;
-import com.hj.approvalprocess.generator.mapper.NumJdMapper;
-import com.hj.approvalprocess.generator.service.NumJdService;
+import com.hj.approvalprocess.entity.NumJd;
+import com.hj.approvalprocess.mapper.NumJdMapper;
+import com.hj.approvalprocess.service.NumJdService;
 import org.springframework.stereotype.Service;
 
 /**

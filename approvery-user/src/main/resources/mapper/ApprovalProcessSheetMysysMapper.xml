@@ -21,9 +21,9 @@
 
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.hj.approvalprocess.generator.mapper.ApprovalProcessSheetMysysMapper">
+<mapper namespace="com.hj.approvalprocess.mapper.ApprovalProcessSheetMysysMapper">
 
-  <resultMap id="approvalProcessSheetMysysMap" type="com.hj.approvalprocess.generator.entity.ApprovalProcessSheetMysys">
+  <resultMap id="approvalProcessSheetMysysMap" type="com.hj.approvalprocess.entity.ApprovalProcessSheetMysys">
                   <id property="id" column="id"/>
                         <result property="approvedName" column="approved_name"/>
                         <result property="approvedId" column="approved_id"/>

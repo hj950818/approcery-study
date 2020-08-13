@@ -17,9 +17,9 @@
 package com.hj.approvalprocess.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.hj.approvalprocess.generator.entity.ApprovalProcessSheetMysys;
-import com.hj.approvalprocess.generator.mapper.ApprovalProcessSheetMysysMapper;
-import com.hj.approvalprocess.generator.service.ApprovalProcessSheetMysysService;
+import com.hj.approvalprocess.entity.ApprovalProcessSheetMysys;
+import com.hj.approvalprocess.mapper.ApprovalProcessSheetMysysMapper;
+import com.hj.approvalprocess.service.ApprovalProcessSheetMysysService;
 import org.springframework.stereotype.Service;
 
 /**

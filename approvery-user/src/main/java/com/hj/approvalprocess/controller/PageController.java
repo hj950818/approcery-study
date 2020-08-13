@@ -19,12 +19,8 @@ package com.hj.approvalprocess.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.bbibm.common.core.util.R;
-import com.bbibm.common.log.annotation.SysLog;
-import com.hj.approvalprocess.entity.Page;
-import com.hj.approvalprocess.generator.entity.Page;
-import com.hj.approvalprocess.generator.service.PageService;
-import org.springframework.security.access.prepost.PreAuthorize;
+import com.hj.approvalprocess.service.PageService;
+import com.hj.approvalprocess.utils.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
@@ -42,7 +38,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/page" )
 public class PageController {
 
-    private final  PageService pageService;
+    private final PageService pageService;
 
     /**
      * 新增申请表
@@ -52,7 +48,7 @@ public class PageController {
     @ApiOperation(value = "新增申请表", notes = "新增申请表")
     @SysLog("新增申请表" )
     @PostMapping
-    @PreAuthorize("@pms.hasPermission('generator_page_add')" )
+//    @PreAuthorize("@pms.hasPermission('generator_page_add')" )
     public R save(@RequestBody Page page) {
         return R.ok(pageService.save(page));
     }

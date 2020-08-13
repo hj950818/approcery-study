@@ -18,7 +18,7 @@
 package com.hj.approvalprocess.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.hj.approvalprocess.generator.entity.Page;
+import com.hj.approvalprocess.entity.Page;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

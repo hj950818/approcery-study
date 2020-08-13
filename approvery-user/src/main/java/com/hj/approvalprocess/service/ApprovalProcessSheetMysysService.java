@@ -18,7 +18,8 @@
 package com.hj.approvalprocess.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hj.approvalprocess.generator.entity.ApprovalProcessSheetMysys;
+import com.hj.approvalprocess.entity.ApprovalProcessSheetMysys;
+import com.hj.approvalprocess.entity.ApprovalProcessSheetMysys;
 
 /**
  * 流程表

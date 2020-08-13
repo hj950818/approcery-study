@@ -19,11 +19,9 @@ package com.hj.approvalprocess.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.bbibm.common.core.util.R;
-import com.bbibm.common.log.annotation.SysLog;
-import com.hj.approvalprocess.generator.entity.NumJd;
-import com.hj.approvalprocess.generator.service.NumJdService;
-import org.springframework.security.access.prepost.PreAuthorize;
+import com.hj.approvalprocess.entity.NumJd;
+import com.hj.approvalprocess.service.NumJdService;
+import com.hj.approvalprocess.utils.R;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
@@ -42,7 +40,7 @@ import org.springframework.web.bind.annotation.*;
 @Api(value = "numjd", tags = "节点表管理")
 public class NumJdController {
 
-    private final  NumJdService numJdService;
+    private final NumJdService numJdService;
 
     /**
      * 分页查询
@@ -76,7 +74,7 @@ public class NumJdController {
     @ApiOperation(value = "新增节点表", notes = "新增节点表")
     @SysLog("新增节点表" )
     @PostMapping
-    @PreAuthorize("@pms.hasPermission('generator_numjd_add')" )
+//    @PreAuthorize("@pms.hasPermission('generator_numjd_add')" )
     public R save(@RequestBody NumJd numJd) {
         return R.ok(numJdService.save(numJd));
     }
@@ -89,7 +87,7 @@ public class NumJdController {
     @ApiOperation(value = "修改节点表", notes = "修改节点表")
     @SysLog("修改节点表" )
     @PutMapping
-    @PreAuthorize("@pms.hasPermission('generator_numjd_edit')" )
+//    @PreAuthorize("@pms.hasPermission('generator_numjd_edit')" )
     public R updateById(@RequestBody NumJd numJd) {
         return R.ok(numJdService.updateById(numJd));
     }
@@ -102,7 +100,7 @@ public class NumJdController {
     @ApiOperation(value = "通过id删除节点表", notes = "通过id删除节点表")
     @SysLog("通过id删除节点表" )
     @DeleteMapping("/{id}" )
-    @PreAuthorize("@pms.hasPermission('generator_numjd_del')" )
+//    @PreAuthorize("@pms.hasPermission('generator_numjd_del')" )
     public R removeById(@PathVariable Integer id) {
         return R.ok(numJdService.removeById(id));
     }

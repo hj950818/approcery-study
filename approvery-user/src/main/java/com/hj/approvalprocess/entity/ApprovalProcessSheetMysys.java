@@ -17,13 +17,15 @@
 
 package com.hj.approvalprocess.entity;
 
-import com.bbibm.common.security.entiy.DataEntity;
+
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.time.LocalDateTime;
 
 /**
  * 流程表
@@ -33,9 +35,8 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @TableName("approval_process_sheet_mysys")
-@EqualsAndHashCode(callSuper = true)
 @ApiModel(value = "流程表")
-public class ApprovalProcessSheetMysys extends DataEntity<ApprovalProcessSheetMysys> {
+public class ApprovalProcessSheetMysys {
 private static final long serialVersionUID = 1L;
 
     /**

@@ -17,9 +17,10 @@
 package com.hj.approvalprocess.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.hj.approvalprocess.generator.entity.Page;
-import com.hj.approvalprocess.generator.mapper.PageMapper;
-import com.hj.approvalprocess.generator.service.PageService;
+
+import com.hj.approvalprocess.entity.Page;
+import com.hj.approvalprocess.mapper.PageMapper;
+import com.hj.approvalprocess.service.PageService;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,6 +1,8 @@
 package com.hj.approvalprocess.service;
 
-import org.springframework.stereotype.Service;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.hj.approvalprocess.entity.User;
 
-public class UserService {
+
+public interface UserService extends IService<User> {
 }

@@ -18,7 +18,7 @@
 package com.hj.approvalprocess.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hj.approvalprocess.generator.entity.NumJd;
+import com.hj.approvalprocess.entity.NumJd;
 
 /**
  * 节点表
