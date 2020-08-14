@@ -55,7 +55,7 @@ public class SwaggerConfig {
                 //标题
                 "胡剑的swagger文档",
                 //描述信息
-                "胡剑",
+                "详细说明",
                 //版本
                 "1.0",
                 //组织路径
