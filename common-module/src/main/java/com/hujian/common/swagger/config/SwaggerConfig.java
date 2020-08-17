@@ -1,22 +1,22 @@
-package com.hj.swagger.config;
+package com.hujian.common.swagger.config;
 
+import io.swagger.annotations.Api;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.bind.annotation.GetMapping;
-import springfox.documentation.RequestHandler;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
-import springfox.documentation.service.Documentation;
 import springfox.documentation.service.VendorExtension;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.ArrayList;
-
-@EnableSwagger2  //开启Swagger
+@ConditionalOnProperty(name = "swagger.enabled", matchIfMissing = true)@EnableSwagger2
+@EnableAutoConfiguration
 @Configuration
 public class SwaggerConfig {
 
@@ -39,7 +39,7 @@ public class SwaggerConfig {
                 //根据类上的注解
 //                .apis(RequestHandlerSelectors.withClassAnnotation(UserController.class))
                 //根据方法上的注解
-                .apis(RequestHandlerSelectors.withMethodAnnotation(GetMapping.class))
+                .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
                 .apis(RequestHandlerSelectors.any())
                 //过滤信息
                 .paths(PathSelectors.ant(""))
@@ -66,4 +66,5 @@ public class SwaggerConfig {
                 "http://www.apache.org/licenses/LICENSE-2.0",
                 new ArrayList<VendorExtension>());
     }
+
 }

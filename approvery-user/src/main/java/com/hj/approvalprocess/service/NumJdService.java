@@ -19,6 +19,7 @@ package com.hj.approvalprocess.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hj.approvalprocess.entity.NumJd;
+import org.springframework.stereotype.Component;
 
 /**
  * 节点表
@@ -26,6 +27,7 @@ import com.hj.approvalprocess.entity.NumJd;
  * @author 胡剑
  * @date 2020-08-11 17:40:31
  */
+
 public interface NumJdService extends IService<NumJd> {
 
 }

@@ -73,7 +73,7 @@ public class ApprovalProcessSheetMysysController {
      * @return R
      */
     @ApiOperation(value = "新增流程表", notes = "新增流程表")
-    @SysLog("新增流程表" )
+//    @SysLog("新增流程表" )
     @PostMapping
 //    @PreAuthorize("@pms.hasPermission('generator_approvalprocesssheetmysys_add')" )
     public R save(@RequestBody ApprovalProcessSheetMysys approvalProcessSheetMysys) {
@@ -86,7 +86,7 @@ public class ApprovalProcessSheetMysysController {
      * @return R
      */
     @ApiOperation(value = "修改流程表", notes = "修改流程表")
-    @SysLog("修改流程表" )
+//    @SysLog("修改流程表" )
     @PutMapping
 //    @PreAuthorize("@pms.hasPermission('generator_approvalprocesssheetmysys_edit')" )
     public R updateById(@RequestBody ApprovalProcessSheetMysys approvalProcessSheetMysys) {
@@ -99,7 +99,7 @@ public class ApprovalProcessSheetMysysController {
      * @return R
      */
     @ApiOperation(value = "通过id删除流程表", notes = "通过id删除流程表")
-    @SysLog("通过id删除流程表" )
+//    @SysLog("通过id删除流程表" )
     @DeleteMapping("/{id}" )
 //    @PreAuthorize("@pms.hasPermission('generator_approvalprocesssheetmysys_del')" )
     public R removeById(@PathVariable Integer id) {

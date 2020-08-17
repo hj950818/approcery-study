@@ -18,6 +18,7 @@
 package com.hj.approvalprocess.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hj.approvalprocess.entity.Page;
+import org.springframework.stereotype.Component;
 
 /**
  * 申请表
@@ -25,6 +26,7 @@ import com.hj.approvalprocess.entity.Page;
  * @author 胡剑
  * @date 2020-08-11 17:40:44
  */
+
 public interface PageService extends IService<Page> {
 
 }

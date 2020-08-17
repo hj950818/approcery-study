@@ -18,7 +18,7 @@
 package com.hj.approvalprocess.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.hj.approvalprocess.entity.Page;
 import com.hj.approvalprocess.service.PageService;
 import com.hj.approvalprocess.utils.R;
 import io.swagger.annotations.Api;
@@ -46,7 +46,7 @@ public class PageController {
      * @return R
      */
     @ApiOperation(value = "新增申请表", notes = "新增申请表")
-    @SysLog("新增申请表" )
+//    @SysLog("新增申请表" )
     @PostMapping
 //    @PreAuthorize("@pms.hasPermission('generator_page_add')" )
     public R save(@RequestBody Page page) {

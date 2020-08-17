@@ -58,31 +58,31 @@ public class R<T> implements Serializable {
 	private T data;
 
 	public static <T> R<T> ok() {
-		return restResult(null, CommonConstants.SUCCESS, null);
+		return restResult(null, 1, null);
 	}
 
 	public static <T> R<T> ok(T data) {
-		return restResult(data, CommonConstants.SUCCESS, null);
+		return restResult(data, 1, null);
 	}
 
 	public static <T> R<T> ok(T data, String msg) {
-		return restResult(data, CommonConstants.SUCCESS, msg);
+		return restResult(data, 1, msg);
 	}
 
 	public static <T> R<T> failed() {
-		return restResult(null, CommonConstants.FAIL, null);
+		return restResult(null,2, null);
 	}
 
 	public static <T> R<T> failed(String msg) {
-		return restResult(null, CommonConstants.FAIL, msg);
+		return restResult(null, 2, msg);
 	}
 
 	public static <T> R<T> failed(T data) {
-		return restResult(data, CommonConstants.FAIL, null);
+		return restResult(data, 2, null);
 	}
 
 	public static <T> R<T> failed(T data, String msg) {
-		return restResult(data, CommonConstants.FAIL, msg);
+		return restResult(data, 2, msg);
 	}
 
 	private static <T> R<T> restResult(T data, int code, String msg) {

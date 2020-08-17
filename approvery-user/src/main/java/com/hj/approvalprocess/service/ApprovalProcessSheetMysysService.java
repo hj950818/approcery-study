@@ -20,6 +20,7 @@ package com.hj.approvalprocess.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hj.approvalprocess.entity.ApprovalProcessSheetMysys;
 import com.hj.approvalprocess.entity.ApprovalProcessSheetMysys;
+import org.springframework.stereotype.Component;
 
 /**
  * 流程表
@@ -27,6 +28,7 @@ import com.hj.approvalprocess.entity.ApprovalProcessSheetMysys;
  * @author 胡剑
  * @date 2020-08-11 17:41:04
  */
+
 public interface ApprovalProcessSheetMysysService extends IService<ApprovalProcessSheetMysys> {
 
 }

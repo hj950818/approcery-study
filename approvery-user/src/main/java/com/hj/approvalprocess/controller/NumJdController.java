@@ -72,7 +72,7 @@ public class NumJdController {
      * @return R
      */
     @ApiOperation(value = "新增节点表", notes = "新增节点表")
-    @SysLog("新增节点表" )
+//    @SysLogog("新增节点表" )
     @PostMapping
 //    @PreAuthorize("@pms.hasPermission('generator_numjd_add')" )
     public R save(@RequestBody NumJd numJd) {
@@ -85,7 +85,7 @@ public class NumJdController {
      * @return R
      */
     @ApiOperation(value = "修改节点表", notes = "修改节点表")
-    @SysLog("修改节点表" )
+//    @SysLog("修改节点表" )
     @PutMapping
 //    @PreAuthorize("@pms.hasPermission('generator_numjd_edit')" )
     public R updateById(@RequestBody NumJd numJd) {
@@ -98,7 +98,7 @@ public class NumJdController {
      * @return R
      */
     @ApiOperation(value = "通过id删除节点表", notes = "通过id删除节点表")
-    @SysLog("通过id删除节点表" )
+//    @SysLog("通过id删除节点表" )
     @DeleteMapping("/{id}" )
 //    @PreAuthorize("@pms.hasPermission('generator_numjd_del')" )
     public R removeById(@PathVariable Integer id) {
