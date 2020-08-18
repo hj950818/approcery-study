@@ -18,6 +18,7 @@
 package com.hj.approvalprocess.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.hj.approvalprocess.entity.ApprovalProcessSheetMysys;
 import com.hj.approvalprocess.entity.Page;
 import com.hj.approvalprocess.service.PageService;
 import com.hj.approvalprocess.utils.R;
@@ -47,11 +48,22 @@ public class PageController {
      */
     @ApiOperation(value = "新增申请表", notes = "新增申请表")
 //    @SysLog("新增申请表" )
-    @PostMapping
+    @PostMapping(value = "/saveNewDate")
 //    @PreAuthorize("@pms.hasPermission('generator_page_add')" )
-    public R save(@RequestBody Page page) {
-        return R.ok(pageService.save(page));
+    public R saveNewDate(@RequestBody Page page) {
+        return R.ok(pageService.saveNewDate(page),"提交成功");
     }
-
+    /**
+     * 申请表审批
+     * @param approvalProcessSheetMysys 申请表
+     * @return R
+     */
+    @ApiOperation(value = "申请表审批", notes = "申请表审批")
+//    @SysLog("新增申请表" )
+    @PostMapping(value = "/approveryData")
+//    @PreAuthorize("@pms.hasPermission('generator_page_add')" )
+    public R approveryData(@RequestBody ApprovalProcessSheetMysys approvalProcessSheetMysys,Integer id) {
+        return R.ok(pageService.approveryData(approvalProcessSheetMysys,id),"审批成功");
+    }
 
 }

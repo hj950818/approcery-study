@@ -17,6 +17,7 @@
 
 package com.hj.approvalprocess.service;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.hj.approvalprocess.entity.ApprovalProcessSheetMysys;
 import com.hj.approvalprocess.entity.Page;
 import org.springframework.stereotype.Component;
 
@@ -29,4 +30,16 @@ import org.springframework.stereotype.Component;
 
 public interface PageService extends IService<Page> {
 
+    /**
+     * 新增申请表
+     * @param page 申请表
+     * @return R
+     */
+    Object saveNewDate(Page page);
+    /**
+     * 申请表审批
+     * @param approvalProcessSheetMysys 申请表
+     * @return R
+     */
+    Object approveryData(ApprovalProcessSheetMysys approvalProcessSheetMysys,Integer id);
 }

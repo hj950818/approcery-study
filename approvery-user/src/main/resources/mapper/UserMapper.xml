@@ -3,4 +3,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.hj.approvalprocess.mapper.UserMapper">
+    <resultMap id="UserMap" type="com.hj.approvalprocess.entity.User">
+        <id property="id" column="id"/>
+        <result property="userName" column="user_name"/>
+        <result property="userId" column="user_id"/>
+        <result property="atendName" column="atend_name"/>
+        <result property="atendId" column="atend_id"/>
+    </resultMap>
 </mapper>

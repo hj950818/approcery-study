@@ -17,12 +17,17 @@
 
 package com.hj.approvalprocess.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 申请表
@@ -40,7 +45,7 @@ private static final long serialVersionUID = 1L;
     /**
      * id
      */
-    @TableId
+    @TableId(type = IdType.AUTO)
     @ApiModelProperty(value="id")
     private Integer id;
     /**
@@ -63,4 +68,10 @@ private static final long serialVersionUID = 1L;
      */
     @ApiModelProperty(value="审批状态 1：待提交 2：待审核 3：已审核 ")
     private String status;
+    /**
+     * 审批人
+     */
+    @ApiModelProperty(value="审批人")
+    @TableField(exist = false)
+    private List<User> userList=new ArrayList<>();
     }

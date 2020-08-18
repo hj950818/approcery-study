@@ -14,3 +14,4 @@ spring:
   cloud:
     nacos:
       server-addr: http://localhost:8848
+
